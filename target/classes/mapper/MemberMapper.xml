@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+	<select id="selectMemberByUsernameAndPassword" resultType="Member">
+		select * from ob_member where username = #{username} and
+		password = #{password} and status = 1
+	</select>
+	<update id="updateMemberUpateTime" parameterType="Member">
+		update
+		ob_member set update_time = 1528706262 where id = #{id}
+	</update>
+	<update id="updateMemberMobile" parameterType="Member">
+		update ob_member
+		set create_time = 1528706262 where id = #{id}
+	</update>
+</mapper>
